@@ -42,6 +42,5 @@ class ViewController: UIViewController {
         parisLocation.text = expositionInfo.location
         parisDuration.text = expositionInfo.duration
         parisDescription.text = expositionInfo.description
-        
     }
 }
