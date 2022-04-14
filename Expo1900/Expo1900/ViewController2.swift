@@ -8,8 +8,9 @@
 import UIKit
 
 class ViewController2: UITableViewController {
-    var items: [Item] = []
     @IBOutlet var itemsTableView: UITableView!
+    var items: [Item] = []
+    weak var delegate: ItemDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,14 @@ class ViewController2: UITableViewController {
             
             return cell
         }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.sendItem(item: items[indexPath.row])
+        guard let thirdViewController = self.storyboard?.instantiateViewController(withIdentifier: "ViewController3") as? ViewController3 else {
+            return
+        }
+        self.present(thirdViewController, animated: true, completion: nil)
+    }
     
     func loadInfo() -> [Item]? {
         let jsonManager: JsonManagerable = JsonManager()
