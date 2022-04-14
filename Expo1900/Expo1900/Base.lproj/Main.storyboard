@@ -185,7 +185,7 @@
         <!--View Controller3-->
         <scene sceneID="rBb-B0-2eX">
             <objects>
-                <viewController storyboardIdentifier="ViewController3" id="cWB-3U-Psw" customClass="ViewController3" customModule="Expo1900" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cWB-3U-Psw" customClass="ViewController3" customModule="Expo1900" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p5R-3a-U1x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

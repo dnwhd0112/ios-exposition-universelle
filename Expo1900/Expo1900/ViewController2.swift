@@ -41,11 +41,12 @@ class ViewController2: UITableViewController {
         }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.sendItem(item: items[indexPath.row])
         guard let thirdViewController = self.storyboard?.instantiateViewController(withIdentifier: "ViewController3") as? ViewController3 else {
             return
         }
         self.present(thirdViewController, animated: true, completion: nil)
+        self.delegate = thirdViewController
+        delegate?.sendItem(item: items[indexPath.row])
     }
     
     func loadInfo() -> [Item]? {
