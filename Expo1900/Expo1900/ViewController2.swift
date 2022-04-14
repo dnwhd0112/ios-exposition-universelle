@@ -10,7 +10,7 @@ import UIKit
 class ViewController2: UITableViewController {
     @IBOutlet var itemsTableView: UITableView!
     var items: [Item] = []
-    weak var delegate: ItemDelegate?
+//    weak var delegate: ItemDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()

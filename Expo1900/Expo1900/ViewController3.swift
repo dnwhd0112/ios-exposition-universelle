@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol ItemDelegate: NSObject {
-    func sendItem(item: Item)
-}
+//protocol ItemDelegate: NSObject {
+//    func sendItem(item: Item)
+//}
 
-class ViewController3: UIViewController, ItemDelegate {
+class ViewController3: UIViewController {
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     
@@ -29,10 +29,10 @@ class ViewController3: UIViewController, ItemDelegate {
         // Do any additional setup after loading the view.
     }
     
-    func sendItem(item: Item) {
-        itemImage.image = UIImage(named: item.imageName)
-        descriptionLabel.text = item.description
-    }
+//    func sendItem(item: Item) {
+//        itemImage.image = UIImage(named: item.imageName)
+//        descriptionLabel.text = item.description
+//    }
 
 
     /*
