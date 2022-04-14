@@ -24,6 +24,11 @@ class ViewController: UIViewController {
         setInitValue(expositionInfo: expositionInfo)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     func loadInfo() -> ExpositionInfo? {
         let jsonManager: JsonManagerable = JsonManager()
         do {
@@ -42,5 +47,12 @@ class ViewController: UIViewController {
         durationLabel.text = "개최 기간 : \(expositionInfo.duration)"
         descriptionLabel.text = expositionInfo.description
         viewTransitionButton.titleLabel?.text = "한국의 출품작 보러가기"
+    }
+    
+    @IBAction func viewTransitionButtonIsTapped(_ sender: UIButton) {
+        guard let secondViewController = storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? ViewController2 else {
+            return
+        }
+        self.navigationController?.pushViewController(secondViewController, animated: true)
     }
 }

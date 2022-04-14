@@ -15,7 +15,11 @@ class ViewController2: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         items = loadInfo() ?? []
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -34,7 +38,6 @@ class ViewController2: UITableViewController {
         
         cell.cellDescription.text = item.shortDescription
         cell.cellTitle.text = item.name
-        
         cell.cellImageView.image = UIImage(named: item.imageName)
             
             return cell
@@ -44,7 +47,9 @@ class ViewController2: UITableViewController {
         guard let thirdViewController = self.storyboard?.instantiateViewController(withIdentifier: "ViewController3") as? ViewController3 else {
             return
         }
+        
         self.present(thirdViewController, animated: true, completion: nil)
+//        self.navigationController?.pushViewController(thirdViewController, animated: true)
         self.delegate = thirdViewController
         delegate?.sendItem(item: items[indexPath.row])
     }
