@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController2: UITableViewController {
     var items: [Item] = []
+    @IBOutlet var itemsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +26,15 @@ class ViewController2: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath)
-
+            let cell = itemsTableView.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath) as! ItemCell
+        //! -> ? 로 나중에 변환
+        
+        let item = items[indexPath.row]
+        
+        cell.cellDescription.text = item.shortDescription
+        cell.cellTitle.text = item.name
+        
+        cell.cellImageView.image = UIImage(named: item.imageName)
             
             return cell
         }
@@ -41,15 +49,4 @@ class ViewController2: UITableViewController {
             return nil
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

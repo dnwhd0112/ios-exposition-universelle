@@ -60,6 +60,9 @@
                                                 <rect key="frame" x="207" y="376.5" width="67" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <segue destination="wzu-vt-tt3" kind="show" id="iOI-Yl-HTj"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -122,56 +125,16 @@
             </objects>
             <point key="canvasLocation" x="1188" y="139"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="vsH-r2-eAq">
-            <objects>
-                <viewController id="DCq-7w-v3F" customClass="TableViewController" customModule="Expo1900" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="iP4-Pf-K5k">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6rH-Vo-rX8">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TitleCell" id="etj-3W-5y2">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="etj-3W-5y2" id="Gaq-30-DXg">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="W87-At-zuI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="6rH-Vo-rX8" firstAttribute="leading" secondItem="W87-At-zuI" secondAttribute="leading" id="PXk-kq-hdU"/>
-                            <constraint firstItem="W87-At-zuI" firstAttribute="trailing" secondItem="6rH-Vo-rX8" secondAttribute="trailing" id="RlS-er-YlO"/>
-                            <constraint firstItem="6rH-Vo-rX8" firstAttribute="top" secondItem="W87-At-zuI" secondAttribute="top" id="X7v-ha-iLF"/>
-                            <constraint firstItem="W87-At-zuI" firstAttribute="bottom" secondItem="6rH-Vo-rX8" secondAttribute="bottom" id="YHy-3f-Tgp"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="6rH-Vo-rX8" id="RkL-QX-Gme"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OWI-oJ-Ixd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2029" y="139"/>
-        </scene>
         <!--View Controller2-->
         <scene sceneID="kUq-9Q-zH3">
             <objects>
                 <tableViewController id="wzu-vt-tt3" customClass="ViewController2" customModule="Expo1900" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="rg3-db-GQ6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemsCell" id="nCH-Xc-2dG">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemsCell" id="nCH-Xc-2dG" customClass="ItemCell" customModule="Expo1900" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nCH-Xc-2dG" id="5un-pb-bzR">
@@ -198,6 +161,11 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellDescription" destination="81O-p0-B2K" id="Azk-d2-pdB"/>
+                                    <outlet property="cellImageView" destination="cq1-mq-uzX" id="0pd-R2-cOR"/>
+                                    <outlet property="cellTitle" destination="9ix-GT-jxF" id="c3m-Rk-gI2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -206,10 +174,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="4jO-j8-avv"/>
+                    <connections>
+                        <outlet property="itemsTableView" destination="rg3-db-GQ6" id="jjd-pH-WbN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gqU-5I-71G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3239" y="139"/>
+            <point key="canvasLocation" x="1909" y="149"/>
         </scene>
     </scenes>
     <resources>

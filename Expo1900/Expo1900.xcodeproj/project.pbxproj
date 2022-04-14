@@ -21,6 +21,7 @@
 		C79FF4C12589F404005FB0FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C79FF4BF2589F404005FB0FD /* LaunchScreen.storyboard */; };
 		E127AFAA2806FC2500B8115B /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127AFA92806FC2500B8115B /* ViewController2.swift */; };
 		E197D5AA280446C0007F6BD0 /* ExpositionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E197D5A9280446C0007F6BD0 /* ExpositionInfo.swift */; };
+		E1B5A1632807D70000913AEB /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B5A1622807D70000913AEB /* ItemCell.swift */; };
 		E1B728E82806997000398283 /* ExpoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B728E72806997000398283 /* ExpoError.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		C79FF4C22589F404005FB0FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E127AFA92806FC2500B8115B /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		E197D5A9280446C0007F6BD0 /* ExpositionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpositionInfo.swift; sourceTree = "<group>"; };
+		E1B5A1622807D70000913AEB /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		E1B728E72806997000398283 /* ExpoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpoError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				C79FF4B42589F401005FB0FD /* AppDelegate.swift */,
+				E1B5A1622807D70000913AEB /* ItemCell.swift */,
 				C79FF4B62589F401005FB0FD /* SceneDelegate.swift */,
 				C79FF4B82589F401005FB0FD /* ViewController.swift */,
 				E127AFA92806FC2500B8115B /* ViewController2.swift */,
@@ -241,6 +244,7 @@
 				E1B728E82806997000398283 /* ExpoError.swift in Sources */,
 				B3BCF6C3280444E1007E1A9E /* Item.swift in Sources */,
 				E127AFAA2806FC2500B8115B /* ViewController2.swift in Sources */,
+				E1B5A1632807D70000913AEB /* ItemCell.swift in Sources */,
 				B35EC7BD2807C20C00008D22 /* TableViewController.swift in Sources */,
 				B3BCF701280697F8007E1A9E /* DataFileName.swift in Sources */,
 				B35AFCD4280533180003D72A /* JsonManager.swift in Sources */,
