@@ -48,10 +48,13 @@ class ViewController2: UITableViewController {
             return
         }
         
-        self.present(thirdViewController, animated: true, completion: nil)
-//        self.navigationController?.pushViewController(thirdViewController, animated: true)
-        self.delegate = thirdViewController
-        delegate?.sendItem(item: items[indexPath.row])
+        //self.present(thirdViewController, animated: true, completion: nil)
+        thirdViewController.item = items[indexPath.row]
+        
+        self.navigationController?.pushViewController(thirdViewController, animated: true)
+        
+//        self.delegate = thirdViewController
+  //      delegate?.sendItem(item: items[indexPath.row])
     }
     
     func loadInfo() -> [Item]? {

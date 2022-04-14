@@ -120,6 +120,7 @@
                         <outlet property="titleLabel" destination="ewd-Oc-huY" id="rUB-t1-W2F"/>
                         <outlet property="viewTransitionButton" destination="Rmb-e5-A9F" id="odn-Jo-7lU"/>
                         <outlet property="visitorsLabel" destination="5cf-i2-3fo" id="41N-xF-x9h"/>
+                        <segue destination="wzu-vt-tt3" kind="push" id="roD-Vx-aug"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wnl-Gk-AHc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -185,6 +186,7 @@
                     <navigationItem key="navigationItem" title="한국의 출품작" id="4jO-j8-avv"/>
                     <connections>
                         <outlet property="itemsTableView" destination="rg3-db-GQ6" id="jjd-pH-WbN"/>
+                        <segue destination="cWB-3U-Psw" kind="push" id="yW0-Tn-XM8"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gqU-5I-71G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -200,7 +202,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccN-Tv-D8g">
-                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eeV-K9-oPM" userLabel="Contents View">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="150.5"/>
@@ -257,6 +259,7 @@
                             <constraint firstItem="ccN-Tv-D8g" firstAttribute="top" secondItem="COS-dv-3jt" secondAttribute="top" id="y3N-WT-0gg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="zDv-zQ-r90"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="1VN-mn-Mzv" id="A3A-yb-LAD"/>
                         <outlet property="itemImage" destination="8N1-gU-4cT" id="rUh-Bv-qEG"/>

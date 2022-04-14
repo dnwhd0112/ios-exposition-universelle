@@ -15,8 +15,16 @@ class ViewController3: UIViewController, ItemDelegate {
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    var item: Item?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let usingItem = item else {
+            return
+        }
+        itemImage.image = UIImage(named: usingItem.imageName)
+        descriptionLabel.text = usingItem.description
         
         // Do any additional setup after loading the view.
     }
