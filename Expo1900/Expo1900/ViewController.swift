@@ -8,13 +8,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var parisImageView: UIImageView!
-    @IBOutlet var parisTitle: UILabel!
-    @IBOutlet var parisVisitor: UILabel!
-    @IBOutlet var parisLocation: UILabel!
-    @IBOutlet var parisDuration: UILabel!
-    @IBOutlet var parisDescription: UILabel!
-    @IBOutlet var parisButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var visitorsLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var viewTransitionButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,6 @@ class ViewController: UIViewController {
             return
         }
         setInitValue(expositionInfo: expositionInfo)
-        // Do any additional setup after loading the view.
     }
     
     func loadInfo() -> ExpositionInfo? {
@@ -37,10 +36,11 @@ class ViewController: UIViewController {
     }
     
     func setInitValue(expositionInfo: ExpositionInfo) {
-        parisTitle.text = expositionInfo.title
-        parisVisitor.text = "\(expositionInfo.visitors)"
-        parisLocation.text = expositionInfo.location
-        parisDuration.text = expositionInfo.duration
-        parisDescription.text = expositionInfo.description
+        titleLabel.text = expositionInfo.title
+        visitorsLabel.text = "방문객 : \(expositionInfo.visitors) 명"
+        locationLabel.text = "개최지: \(expositionInfo.location)"
+        durationLabel.text = "개최 기간 : \(expositionInfo.duration)"
+        descriptionLabel.text = expositionInfo.description
+        viewTransitionButton.titleLabel?.text = "한국의 출품작 보러가기"
     }
 }
